@@ -1,0 +1,33 @@
+# qmd search index (generated locally, not committed)
+db/
+.qmd/
+
+# Large binary files — add to git LFS if you need version history on these
+*.zip
+*.tar.gz
+*.gz
+*.rar
+*.7z
+*.mp4
+*.mov
+*.avi
+
+# Data files
+*.csv
+*.xlsx
+*.parquet
+*.h5
+*.hdf5
+
+# Note: PDFs in raw/ ARE tracked by default (they are your source documents).
+# If PDFs are too large for git, set up git LFS:
+#   git lfs install
+#   git lfs track "raw/*.pdf"
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+*.swp

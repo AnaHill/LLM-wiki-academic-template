@@ -1,0 +1,25 @@
+{
+  "foam.openDailyNote.onVSCodeStartup": false,
+  "foam.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/out/**",
+    "raw/**"
+  ],
+  "foam.graph.style": {
+    "background": "#202020",
+    "node": {
+      "regular": { "color": "#277da1" },
+      "placeholder": { "color": "#aa5042" }
+    }
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  }
+}
