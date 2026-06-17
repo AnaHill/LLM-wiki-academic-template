@@ -10,11 +10,25 @@ Based on [Andrej Karpathy's LLM wiki idea](https://gist.github.com/karpathy/442a
 
 ## Quick start
 
-1. Clone this repository.
-2. Open in VS Code — accept the Foam extension recommendation.
-3. Open a Claude Code session in this directory.
-4. Drop a PDF into `raw/` and say: **"ingest `raw/<filename.pdf>`"**
-5. When ready to write: open `draft/index.md`, select a section, say **"write the introduction"**.
+### Starting a new paper project (recommended)
+
+Use the GitHub template to get a clean repo with no connection to this template:
+
+```bash
+gh repo create my-paper-on-topic-X --public --template AnaHill/LLM-wiki-academic-template --clone
+cd my-paper-on-topic-X
+```
+
+Or click **"Use this template"** on [github.com/AnaHill/LLM-wiki-academic-template](https://github.com/AnaHill/LLM-wiki-academic-template) and clone the result.
+
+Each paper gets its own isolated repo. Edit `CLAUDE.md` in it to tailor the wiki schema for that paper's topic.
+
+### Then
+
+1. Open the project folder in VS Code — accept the Foam extension recommendation.
+2. Open a Claude Code session in this directory.
+3. Drop a PDF into `raw/` and say: **"ingest `raw/<filename.pdf>`"**
+4. When ready to write: open `draft/index.md`, select a section, say **"write the introduction"**.
 
 ---
 
