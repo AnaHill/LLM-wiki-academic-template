@@ -18,7 +18,7 @@ The full pattern is described in [llm-wiki.md](llm-wiki.md). Read it when starti
 | `wiki/index.md` | Content catalog — read this first when answering any query. |
 | `wiki/log.md` | Append-only chronological log of all operations. |
 | `wiki/references.md` | Auto-maintained citation list, populated on each ingest. |
-| `draft/index.md` | Evolving paper draft — single file with IMRaD sections. |
+| `draft.md` | Evolving paper draft — single file with IMRaD sections. |
 | `skills/` | Claude Code skill definitions. |
 
 ## Four operations
@@ -43,9 +43,9 @@ When the researcher asks a question:
 
 ### Draft
 When the researcher asks to write or update the paper draft:
-1. Read `draft/index.md` to understand what is already written.
+1. Read `draft.md` to understand what is already written.
 2. Read relevant wiki pages for the section being worked on.
-3. Update the relevant section(s) in `draft/index.md` — surgical edits only.
+3. Update the relevant section(s) in `draft.md` — surgical edits only.
 4. Do not touch sections the researcher did not ask about.
 5. Append an entry to `wiki/log.md`.
 
@@ -54,7 +54,7 @@ Typical trigger phrases: *"write the introduction"*, *"update the related work s
 ### Lint
 When the researcher asks for a health check:
 - Look for contradictions between pages, stale claims superseded by newer sources, orphan pages (no inbound links), concepts mentioned but lacking their own page, and missing cross-references.
-- Check `draft/index.md` for claims that are not backed by any page in `wiki/`.
+- Check `draft.md` for claims that are not backed by any page in `wiki/`.
 - Suggest new questions, missing papers, or sources that would fill visible gaps.
 
 ## Paper page format
@@ -104,7 +104,7 @@ Links to related wiki pages.
 
 **Raw sources are immutable.** Never edit files in `raw/`. The LLM reads from them; that's all.
 
-**Draft is a single file.** `draft/index.md` contains the full paper with IMRaD sections as `##` headings. Update only the section asked about. Do not restructure the file unless explicitly asked.
+**Draft is a single file.** `draft.md` contains the full paper with IMRaD sections as `##` headings. Update only the section asked about. Do not restructure the file unless explicitly asked.
 
 ## Schema evolution
 
@@ -118,4 +118,4 @@ This CLAUDE.md *is* the schema for this wiki instance. Update it as conventions 
 
 **Minimum necessary.** Don't create new wiki pages speculatively. If a concept appears once, note it inline. Create a dedicated page when it recurs or becomes central.
 
-**Cite everything in the draft.** Every factual claim in `draft/index.md` should be traceable to a page in `wiki/papers/`. If a claim lacks a source, flag it with `[CITATION NEEDED]`.
+**Cite everything in the draft.** Every factual claim in `draft.md` should be traceable to a page in `wiki/papers/`. If a claim lacks a source, flag it with `[CITATION NEEDED]`.
