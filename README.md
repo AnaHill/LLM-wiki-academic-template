@@ -1,6 +1,6 @@
-# LLM Academic Wiki — VS Code Foam
+# LLM Academic Wiki
 
-A wiki template for academic researchers, maintained by an LLM, using VS Code + [Foam](https://foambubble.github.io/foam/) as the IDE.
+A wiki template for academic researchers, maintained by an LLM, using VS Code + Claude Code.
 
 Drop a paper (PDF/other) into `raw/`. The LLM reads it, writes a summary page, updates the concept and gap pages, and appends a citation to the reference list. When you're ready to write, tell it to draft or update a section — it draws from everything it has read.
 
@@ -25,8 +25,7 @@ Each paper gets its own isolated repo. Edit `CLAUDE.md` in it to tailor the wiki
 
 ### Then
 
-1. Open the project folder in VS Code — accept the Foam extension recommendation.
-2. Open a Claude Code session in this directory.
+1. Open the project folder in VS Code and open a Claude Code session in this directory.
 3. Drop a paper (PDF/other) into `raw/` and say: **"ingest `raw/<filename>`"**
 4. When ready to write: open `draft.md`, select a section, say to Claude e.g. **"write the introduction"**.
 
@@ -83,7 +82,7 @@ wiki/
   references.md    auto-maintained citation list (APA by default)
 skills/
   karpathy-guidelines/  behavioral guidelines for the LLM
-index.md         evolving paper draft — IMRaD sections, single file
+draft.md           evolving paper draft — IMRaD sections, single file
 CLAUDE.md          wiki schema and LLM instructions
 llm-wiki.md        the pattern explained
 ```
@@ -96,3 +95,14 @@ llm-wiki.md        the pattern explained
 - **`[CITATION NEEDED]`** markers in the draft mean Claude couldn't find a supporting source — add the paper and re-ingest.
 - **Graph view** in Foam shows how paper pages link to concept and gap pages — useful for spotting holes in coverage.
 - **`wiki/references.md`** is copy-paste ready for submission; tell Claude your citation style if not APA.
+
+---
+
+## Optional: VS Code Foam
+
+[Foam](https://foambubble.github.io/foam/) adds a graph view and `[[wikilink]]` navigation on top of this repo. It's not required — the wiki works fine without it.
+
+To try it:
+1. Install the [Foam extension](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) from the VS Code marketplace.
+2. Reload the window — Foam will index the `wiki/` files automatically.
+3. Open **Foam: Show Graph** from the command palette to explore link relationships between pages.
