@@ -15,11 +15,11 @@ Based on [Andrej Karpathy's LLM wiki idea](https://gist.github.com/karpathy/442a
 Use the GitHub template to get a clean repo with no connection to this template:
 
 ```bash
-gh repo create my-paper-on-topic-X --public --template AnaHill/LLM-wiki-academic-template --clone
+gh repo create my-paper-on-topic-X --public --template AnaHill/llm-wiki-academic-template --clone
 cd my-paper-on-topic-X
 ```
 
-Or click **"Use this template"** on [github.com/AnaHill/LLM-wiki-academic-template](https://github.com/AnaHill/LLM-wiki-academic-template) and clone the result.
+Or click **"Use this template"** on [github.com/AnaHill/llm-wiki-academic-template](https://github.com/AnaHill/llm-wiki-academic-template) and clone the result.
 
 Each paper gets its own isolated repo. Edit the agent instructions file (`CLAUDE.md` for Claude Code) to tailor the wiki schema for that paper's topic.
 
