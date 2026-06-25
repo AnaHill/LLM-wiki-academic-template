@@ -1,6 +1,6 @@
 # LLM Academic Wiki
 
-A wiki template for academic researchers, maintained by an LLM, using VS Code + Claude Code.
+A wiki template for academic researchers, maintained by an AI agent, using VS Code as the editor. The pattern works with any LLM that supports an instruction file; the reference implementation uses [Claude Code](https://claude.ai/code) and its `CLAUDE.md` convention.
 
 Drop a paper (PDF/other) into `raw/`. The LLM reads it, writes a summary page, updates the concept and gap pages, and appends a citation to the reference list. When you're ready to write, tell it to draft or update a section — it draws from everything it has read.
 
@@ -21,13 +21,13 @@ cd my-paper-on-topic-X
 
 Or click **"Use this template"** on [github.com/AnaHill/LLM-wiki-academic-template](https://github.com/AnaHill/LLM-wiki-academic-template) and clone the result.
 
-Each paper gets its own isolated repo. Edit `CLAUDE.md` in it to tailor the wiki schema for that paper's topic.
+Each paper gets its own isolated repo. Edit the agent instructions file (`CLAUDE.md` for Claude Code) to tailor the wiki schema for that paper's topic.
 
 ### Then
 
-1. Open the project folder in VS Code and open a Claude Code session in this directory.
-3. Drop a paper (PDF/other) into `raw/` and say: **"ingest `raw/<filename>`"**
-4. When ready to write: open `draft.md`, select a section, say to Claude e.g. **"write the introduction"**.
+1. Open the project folder in VS Code and start an AI agent session in this directory.
+2. Drop a paper (PDF/other) into `raw/` and say: **"ingest `raw/<filename>`"**
+3. When ready to write: open `draft.md`, select a section, and say e.g. **"write the introduction"**.
 
 ---
 
@@ -54,7 +54,7 @@ raw/ ──► wiki/papers/ ──► wiki/index.md ──► draft.md
 - **Draft** — ask to write or rewrite any section of `draft.md`
 - **Lint** — health check: stale claims, orphans, unsupported draft assertions
 
-See [CLAUDE.md](CLAUDE.md) for the full schema and [llm-wiki.md](llm-wiki.md) for the concept.
+See [CLAUDE.md](CLAUDE.md) for the full wiki schema (the agent instructions file) and [llm-wiki.md](llm-wiki.md) for the concept.
 
 ---
 
@@ -83,7 +83,7 @@ wiki/
 skills/
   karpathy-guidelines/  behavioral guidelines for the LLM
 draft.md           evolving paper draft — IMRaD sections, single file
-CLAUDE.md          wiki schema and LLM instructions
+CLAUDE.md          wiki schema and agent instructions (Claude Code convention)
 llm-wiki.md        the pattern explained
 ```
 
@@ -91,10 +91,10 @@ llm-wiki.md        the pattern explained
 
 ## Tips
 
-- **Select a section** in `draft.md` and say *"rewrite this"* — Claude edits only that section.
-- **`[CITATION NEEDED]`** markers in the draft mean Claude couldn't find a supporting source — add the paper and re-ingest.
+- **Select a section** in `draft.md` and say *"rewrite this"* — the agent edits only that section.
+- **`[CITATION NEEDED]`** markers in the draft mean the agent couldn't find a supporting source — add the paper and re-ingest.
 - **Graph view** in Foam shows how paper pages link to concept and gap pages — useful for spotting holes in coverage.
-- **`wiki/references.md`** is copy-paste ready for submission; tell Claude your citation style if not APA.
+- **`wiki/references.md`** is copy-paste ready for submission; specify your citation style if not APA.
 
 ---
 
